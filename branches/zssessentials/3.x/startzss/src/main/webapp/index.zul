@@ -1,8 +1,0 @@
-<?page title="My First ZK Spreadsheet application" contentType="text/html;charset=UTF-8"?>
-<zk>
-	<window title="My First ZK Spreadsheet Application" apply="org.zkoss.zss.example.startzss.MyComposer"
-		border="normal" vflex="1" width="100%">
-		<spreadsheet src="/WEB-INF/startzss.xlsx" maxVisibleRows="150" maxVisibleColumns="40" vflex="1" width="100%"
-		 showToolbar="true" showSheetbar="true" showFormulabar="true"/>
-	</window>
-</zk>
