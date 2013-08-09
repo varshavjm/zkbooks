@@ -1,7 +1,0 @@
-<window title="Access Bean with different scopes" border="normal" width="700px"
-	apply="org.zkoss.reference.developer.cdi.composer.MyComposer">
-		<hlayout>
-			User Preference :
-			<label id="prefernceLabel" />
-		</hlayout>
-</window>
