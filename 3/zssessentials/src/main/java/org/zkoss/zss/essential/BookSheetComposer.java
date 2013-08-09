@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.zkoss.zk.ui.Component;
-import org.zkoss.zk.ui.event.Event;
+import org.zkoss.zk.ui.event.SelectionEvent;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
@@ -53,7 +53,7 @@ public class BookSheetComposer extends SelectorComposer<Component>{
 	}
 	
 	@Listen("onSelect = #sheetBox")
-	public void selectSheet(Event event) {
-		spreadsheet.setSelectedSheet(sheetBox.getSelectedItem().getValue().toString());
+	public void selectSheet(SelectionEvent event) {
+		spreadsheet.setSelectedSheet(event.getSelectedText());
 	}
 }
