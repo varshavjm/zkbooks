@@ -23,8 +23,8 @@ import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zss.ui.Spreadsheet;
-import org.zkoss.zul.Combobox;
 import org.zkoss.zul.ListModelList;
+import org.zkoss.zul.Listbox;
 
 /**
  * Demonstrate how to change different sheet
@@ -35,7 +35,7 @@ import org.zkoss.zul.ListModelList;
 public class BookSheetComposer extends SelectorComposer<Component>{
 	
 	@Wire
-	Combobox sheetBox;
+	Listbox sheetBox;
 	@Wire
 	Spreadsheet spreadsheet;
 	//override
@@ -54,6 +54,6 @@ public class BookSheetComposer extends SelectorComposer<Component>{
 	
 	@Listen("onSelect = #sheetBox")
 	public void selectSheet(Event event) {
-		spreadsheet.setSelectedSheet(sheetBox.getText());
+		spreadsheet.setSelectedSheet(sheetBox.getSelectedItem().getValue().toString());
 	}
 }
