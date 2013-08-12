@@ -31,7 +31,7 @@ public class ExportComposer extends SelectorComposer<Component> {
 	
 	@Listen("onClick = #exportExcel")
 	public void doExport() throws IOException{
-		Exporter exporter = Exporters.getExporter("excel");
+		Exporter exporter = Exporters.getExporter();
 		Book book = ss.getBook();
 		File file = File.createTempFile(Long.toString(System.currentTimeMillis()),"temp");
 		FileOutputStream fos = null;
