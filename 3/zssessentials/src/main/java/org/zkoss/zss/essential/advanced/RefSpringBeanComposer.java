@@ -11,7 +11,7 @@ import org.zkoss.zss.ui.Spreadsheet;
 import org.zkoss.zul.Doublebox;
 
 /**
- * Reference Spring bean example.
+ * Reference Spring beans example.
  * 
  * @author Hawk
  * 

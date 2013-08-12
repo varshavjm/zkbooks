@@ -12,7 +12,7 @@ import org.zkoss.zss.ui.event.CellSelectionEvent;
 import org.zkoss.zul.Label;
 
 /**
- * Demonstrate CellStyle, CellOperationUtil API usage
+ * Demonstrate merge API usage
  * 
  * @author Hawk
  * 

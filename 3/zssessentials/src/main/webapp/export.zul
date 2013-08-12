@@ -8,7 +8,7 @@
 					showContextMenu="true" showToolbar="true" showSheetbar="true" maxVisibleRows="100"
 					maxVisibleColumns="40" src="/WEB-INF/books/sample.xlsx" />
 			</vlayout>
-			<groupbox hflex="1">
+			<groupbox width="300px">
 				<caption label="Excel exporter" />
 				<vlayout>
 					<button id="exportExcel" label="Export Excel" />

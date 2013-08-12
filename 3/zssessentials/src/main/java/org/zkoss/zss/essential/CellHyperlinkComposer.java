@@ -4,16 +4,13 @@ import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
-import org.zkoss.zss.api.IllegalFormulaException;
 import org.zkoss.zss.api.Range;
 import org.zkoss.zss.api.Ranges;
 import org.zkoss.zss.api.model.CellData;
 import org.zkoss.zss.api.model.Hyperlink;
-import org.zkoss.zss.essential.util.ClientUtil;
 import org.zkoss.zss.ui.Position;
 import org.zkoss.zss.ui.Spreadsheet;
 import org.zkoss.zul.Label;
-import org.zkoss.zul.Textbox;
 
 /**
  * Demonstrate cell data API usage

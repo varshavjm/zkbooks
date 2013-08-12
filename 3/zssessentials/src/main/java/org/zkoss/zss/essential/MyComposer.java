@@ -11,6 +11,11 @@ import org.zkoss.zss.api.Importers;
 import org.zkoss.zss.api.model.Book;
 import org.zkoss.zss.ui.Spreadsheet;
 
+/**
+ * Demonstrate Importer.
+ * @author Hawk
+ *
+ */
 @SuppressWarnings("serial")
 public class MyComposer extends SelectorComposer<Component> {
 
