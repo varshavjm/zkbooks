@@ -7,13 +7,9 @@
 		<format>zip</format>
 	</formats>
 	<fileSets>
-		<fileSet>
-			<directory>${project.basedir}/src/main/java</directory>
+	 	<fileSet>
+			<directory>${project.basedir}/src</directory>
 			<outputDirectory>/${project.artifactId}/src</outputDirectory>
-		</fileSet>
-		<fileSet>
-			<directory>${project.basedir}/src/main/webapp</directory>
-			<outputDirectory>/${project.artifactId}/WebContent</outputDirectory>
 		</fileSet>
 	</fileSets>
 	<files>
