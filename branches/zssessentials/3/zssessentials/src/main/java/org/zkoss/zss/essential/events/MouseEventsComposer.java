@@ -7,6 +7,11 @@ import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zss.ui.event.HeaderMouseEvent;
 import org.zkoss.zul.Menupopup;
 
+/**
+ * Demonstrate header events.
+ * @author Hawk
+ *
+ */
 @SuppressWarnings("serial")
 public class MouseEventsComposer extends SelectorComposer<Component> {
 

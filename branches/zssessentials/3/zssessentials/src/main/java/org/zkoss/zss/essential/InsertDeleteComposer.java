@@ -16,7 +16,7 @@ import org.zkoss.zul.Label;
 
 
 /**
- * This class demonstrates insertion and deletion API usage
+ * This class demonstrates API usage about insertion and deletion.
  * @author dennis, Hawk
  *
  */

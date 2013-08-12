@@ -4,7 +4,7 @@ import org.zkoss.poi.ss.formula.eval.EvaluationException;
 import org.zkoss.poi.ss.formula.functions.MultiOperandNumericFunction;
 
 /**
- * implement a numeric formula that accepts multiple operations
+ * Implement a numeric formula that accepts multiple operations
  * @author Hawk
  *
  */

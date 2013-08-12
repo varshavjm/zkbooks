@@ -9,7 +9,7 @@ import org.zkoss.zss.ui.Spreadsheet;
 import org.zkoss.zul.Doublebox;
 
 /**
- * Reference Java bean example.
+ * Reference JavaBeans example.
  * 
  * @author Hawk
  * 

@@ -23,7 +23,7 @@ import org.zkoss.zul.Listbox;
 import org.zkoss.zul.ext.Selectable;
 
 /**
- * Demonstrate CellStyle, CellOperationUtil API usage
+ * Demonstrate CellStyle & CellOperationUtil API usage
  * 
  * @author Hawk
  * 

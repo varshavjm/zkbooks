@@ -26,7 +26,6 @@ import org.zkoss.zul.Listbox;
 
 /**
  * Demonstrate picture related API usage.
- * Reading a exported Excel 2007 with pictures is tested and passed.
  * @author Hawk
  * 
  */
