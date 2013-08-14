@@ -19,7 +19,6 @@ import java.util.List;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.SelectEvent;
-import org.zkoss.zk.ui.event.SelectionEvent;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
