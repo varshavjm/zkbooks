@@ -4,11 +4,11 @@ import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zss.api.CellRef;
 import org.zkoss.zss.api.Range;
 import org.zkoss.zss.api.Ranges;
 import org.zkoss.zss.api.model.CellData;
 import org.zkoss.zss.api.model.Hyperlink;
-import org.zkoss.zss.ui.Position;
 import org.zkoss.zss.ui.Spreadsheet;
 import org.zkoss.zul.Label;
 
@@ -39,7 +39,7 @@ public class CellHyperlinkComposer extends SelectorComposer<Component> {
 	
 	@Listen("onCellFocus = #ss")
 	public void onCellFocus(){
-		Position pos = ss.getCellFocus();
+		CellRef pos = ss.getCellFocus();
 		
 		refreshCellInfo(pos.getRow(),pos.getColumn());		
 	}
@@ -47,7 +47,7 @@ public class CellHyperlinkComposer extends SelectorComposer<Component> {
 	private void refreshCellInfo(int row, int col){
 		Range range = Ranges.range(ss.getSelectedSheet(),row,col);
 		
-		cellRef.setValue(Ranges.getCellReference(row, col));
+		cellRef.setValue(Ranges.getCellRefString(row, col));
 		//show a cell's data
 		CellData data = range.getCellData();
 		cellFormatText.setValue(data.getFormatText());
