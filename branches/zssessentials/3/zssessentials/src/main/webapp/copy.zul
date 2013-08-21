@@ -10,19 +10,15 @@
 				<groupbox hflex="1" >
 					<caption label="Copy, Cut" />
 					<grid vflex="1" hflex="1">
-						<columns>
-							<column width="100px"/>
-							<column/>
-						</columns>
 						<rows>
 							<row>
-								Selection: <label id="cellSelection"/>
+								Select a range with data and click buttons below:
 							</row>
-							<row>
-								<button id="copyButton" label="Copy to Result Sheet"/>
+							<row >
+								<button id="copyButton" label="Copy to 2nd Sheet"/>
 							</row>
-							<row>
-								<button id="cutButton" label="Cut to Result Sheet"/>
+							<row >
+								<button id="cutButton" label="Cut to 2nd Sheet"/>
 							</row>
 						</rows>
 					</grid>

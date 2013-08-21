@@ -14,6 +14,8 @@
 							<column width="100px"/>
 						</columns>
 						<rows>
+							<row spans="2">Select a cell and click Freeze
+							</row>
 							<row  align="right">
 								<button id="unfreezeButton" label="Unfreeze"/>
 								<button id="freezeButton" label="Freeze"/>

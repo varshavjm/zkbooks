@@ -48,7 +48,7 @@
 							</row>
 							<row spans="2" align="right">
 								<hlayout>
-									<button id="addButton" label="Add" />
+									<button id="addButton" label="Add a Picture" />
 									<button id="deleteButton" label="Delete" />
 								</hlayout>
 							</row>
