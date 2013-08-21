@@ -4,6 +4,7 @@ import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zss.api.AreaRef;
 import org.zkoss.zss.api.CellOperationUtil;
 import org.zkoss.zss.api.Range;
 import org.zkoss.zss.api.Range.DeleteShift;
@@ -12,6 +13,7 @@ import org.zkoss.zss.api.Range.InsertShift;
 import org.zkoss.zss.api.Ranges;
 import org.zkoss.zss.ui.Rect;
 import org.zkoss.zss.ui.Spreadsheet;
+import org.zkoss.zss.ui.event.CellSelectionEvent;
 import org.zkoss.zul.Label;
 
 
@@ -30,13 +32,13 @@ public class InsertDeleteComposer extends SelectorComposer<Component> {
 	private Spreadsheet ss;
 	
 	@Listen("onCellSelection = #ss")
-	public void onCellSelection(){
-		selectionLabel.setValue(Ranges.getAreaReference(ss.getSelection()));
+	public void onCellSelection(CellSelectionEvent event){
+		selectionLabel.setValue(Ranges.getAreaRefString(event.getSheet(), ss.getSelection()));
 	}
 	
 	@Listen("onClick = #insertRow")
 	public void onInsertRow(){
-		Rect selection = ss.getSelection();
+		AreaRef selection = ss.getSelection();
 		Range range = Ranges.range(ss.getSelectedSheet(),selection.getRow(),selection.getColumn());
 
 		//to affect all columns
@@ -48,7 +50,7 @@ public class InsertDeleteComposer extends SelectorComposer<Component> {
 	
 	@Listen("onClick = #insertRow10")
 	public void onInsertRow10(){
-		Rect selection = ss.getSelection();
+		AreaRef selection = ss.getSelection();
 		//mark to insert to the range that contains 10 row
 		Range range = Ranges.range(ss.getSelectedSheet(), selection.getRow(),
 				selection.getColumn(), selection.getRow() + 9,
@@ -63,7 +65,7 @@ public class InsertDeleteComposer extends SelectorComposer<Component> {
 	
 	@Listen("onClick = #deleteRows")
 	public void onDeleteRows(){
-		Rect selection = ss.getSelection();
+		AreaRef selection = ss.getSelection();
 		Range range = Ranges.range(ss.getSelectedSheet(), selection);
 
 		//to affect all columns
@@ -75,7 +77,7 @@ public class InsertDeleteComposer extends SelectorComposer<Component> {
 	
 	@Listen("onClick = #insertColumn")
 	public void onInsertColumn(){
-		Rect selection = ss.getSelection();
+		AreaRef selection = ss.getSelection();
 		Range range = Ranges.range(ss.getSelectedSheet(),selection.getRow(),selection.getColumn());
 
 		//to affect all rows
@@ -88,7 +90,7 @@ public class InsertDeleteComposer extends SelectorComposer<Component> {
 	
 	@Listen("onClick = #insert3Columns")
 	public void onInsert3Columns(){
-		Rect selection = ss.getSelection();
+		AreaRef selection = ss.getSelection();
 		//select the range that contains 3 column
 		Range range = Ranges.range(ss.getSelectedSheet(), selection.getRow(),
 				selection.getColumn(), selection.getRow() ,
@@ -103,7 +105,7 @@ public class InsertDeleteComposer extends SelectorComposer<Component> {
 	
 	@Listen("onClick = #deleteColumns")
 	public void onDeleteColumns(){
-		Rect selection = ss.getSelection();
+		AreaRef selection = ss.getSelection();
 		//mark to insert to the range that contains 10 row
 		Range range = Ranges.range(ss.getSelectedSheet(), selection);
 
@@ -115,7 +117,7 @@ public class InsertDeleteComposer extends SelectorComposer<Component> {
 	
 	@Listen("onClick = #insertCellDown")
 	public void onInsertCellDown(){
-		Rect selection = ss.getSelection();
+		AreaRef selection = ss.getSelection();
 
 		Range range = Ranges.range(ss.getSelectedSheet(), selection);
 		
@@ -125,7 +127,7 @@ public class InsertDeleteComposer extends SelectorComposer<Component> {
 	
 	@Listen("onClick = #insertCellRight")
 	public void onInsertCellRight(){
-		Rect selection = ss.getSelection();
+		AreaRef selection = ss.getSelection();
 
 		Range range = Ranges.range(ss.getSelectedSheet(), selection);
 		
@@ -135,7 +137,7 @@ public class InsertDeleteComposer extends SelectorComposer<Component> {
 	
 	@Listen("onClick = #deleteCellUp")
 	public void onDeleteCellUp(){
-		Rect selection = ss.getSelection();
+		AreaRef selection = ss.getSelection();
 
 		Range range = Ranges.range(ss.getSelectedSheet(), selection);
 		
@@ -145,7 +147,7 @@ public class InsertDeleteComposer extends SelectorComposer<Component> {
 	
 	@Listen("onClick = #deleteCellLeft")
 	public void onDeleteCellLeft(){
-		Rect selection = ss.getSelection();
+		AreaRef selection = ss.getSelection();
 
 		Range range = Ranges.range(ss.getSelectedSheet(), selection);
 		
