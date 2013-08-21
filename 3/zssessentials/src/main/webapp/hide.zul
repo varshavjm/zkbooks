@@ -8,12 +8,15 @@
 				src="/WEB-INF/books/blank.xlsx" />
 			<vlayout width="200px" vflex="1">
 				<groupbox hflex="1" >
-					<caption label="Freeze" />
+					<caption label="Hide" />
 					<grid vflex="1" hflex="1">
 						<columns>
 							<column width="100px"/>
 						</columns>
 						<rows>
+							<row spans="2">
+								Select an arbitrary range and click buttons below: 
+							</row>
 							<row  align="right">
 								<button id="hideButton" label="Hide Rows"/>
 								<button id="unhideButton" label="Unhide Rows"/>
