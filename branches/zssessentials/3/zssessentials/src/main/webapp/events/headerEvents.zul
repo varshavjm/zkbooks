@@ -1,6 +1,6 @@
 <?page title="ZSS" contentType="text/html;charset=UTF-8"?>
 <zk>
-	<window title="ZSS Mouse Events" border="normal" width="100%"
+	<window title="ZSS Header Events" border="normal" width="100%"
 		height="100%" apply="org.zkoss.zss.essential.events.MouseEventsComposer">
 		<spreadsheet width="600px" height="300px" maxVisibleRows="100" maxVisibleColumns="40" 
 		showFormulabar="true" showToolbar="true" src="/WEB-INF/books/blank.xlsx" >
