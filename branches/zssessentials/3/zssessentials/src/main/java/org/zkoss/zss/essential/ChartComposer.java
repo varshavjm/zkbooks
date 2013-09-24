@@ -14,7 +14,6 @@ import org.zkoss.zss.api.model.Chart.Grouping;
 import org.zkoss.zss.api.model.Chart.LegendPosition;
 import org.zkoss.zss.api.model.Chart.Type;
 import org.zkoss.zss.api.model.ChartData;
-import org.zkoss.zss.ui.Rect;
 import org.zkoss.zss.ui.Spreadsheet;
 import org.zkoss.zssex.api.ChartDataUtil;
 import org.zkoss.zul.Intbox;
