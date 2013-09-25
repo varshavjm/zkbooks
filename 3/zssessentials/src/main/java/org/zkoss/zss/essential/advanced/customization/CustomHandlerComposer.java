@@ -31,12 +31,11 @@ public class CustomHandlerComposer extends SelectorComposer<Component> {
 				AuxAction.NEW_BOOK.getAction(), new NewBookHandler());
 		actionManager.registerHandler(
 				DefaultUserActionManagerCtrl.Category.AUXACTION.getName(),
-				AuxAction.EXPORT_PDF.getAction(), new ExportBookHandler());
+				AuxAction.SAVE_BOOK.getAction(), new SaveBookHandler());
 		actionManager.registerHandler(
 				DefaultUserActionManagerCtrl.Category.AUXACTION.getName(),
-				AuxAction.SAVE_BOOK.getAction(), new SaveBookHandler());
+				AuxAction.EXPORT_PDF.getAction(), new ExportBookHandler());
 	}
-	
 }
 
 

@@ -28,11 +28,9 @@ public class SaveBookHandler implements UserActionHandler {
 	@Override
 	public boolean process(UserActionContext ctx){
 		try{
-			String savingPath = WebApps.getCurrent().getRealPath("/WEB-INF/books/")+File.separator;
-			File targetFile = new File(savingPath
-					+ ctx.getBook().getBookName());
-			save(ctx.getBook(), targetFile);
-			Clients.showNotification("saved "+targetFile.getName(),"info",null,null,2000,true);
+			Book book = ctx.getBook();
+			save(book);
+			Clients.showNotification("saved "+book.getBookName(),"info",null,null,2000,true);
 			
 		}catch(Exception e){
 			e.printStackTrace();
@@ -40,7 +38,10 @@ public class SaveBookHandler implements UserActionHandler {
 		return true;
 	}
 
-	public void save(Book book, File targetFile) throws IOException{
+	public void save(Book book) throws IOException{
+		String savingPath = WebApps.getCurrent().getRealPath("/WEB-INF/books/")+File.separator;
+		File targetFile = new File(savingPath
+				+ book.getBookName());
 		FileOutputStream fos = null;
 		try{
 			//write to temporary file first to avoid write error damage original file 
