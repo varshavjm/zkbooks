@@ -31,9 +31,9 @@ public class ExportBookHandler implements UserActionHandler {
 	public boolean process(UserActionContext context) {
 		File file;
 		try {
-			file = saveBookAsTempFile(context.getBook());
-			String bookName = context.getBook().getBookName();
-			String fileName = bookName.substring(0, bookName.indexOf('.'));
+			Book book = context.getBook();
+			file = saveBookAsTempFile(book);
+			String fileName = book.getBookName().substring(0, book.getBookName().indexOf('.'));
 			Filedownload.save(new AMedia(fileName, null, "application/pdf", file, true));
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -42,7 +42,6 @@ public class ExportBookHandler implements UserActionHandler {
 	}
 	
 	public File saveBookAsTempFile(Book book) throws IOException{
-		
 		File f = File.createTempFile("temp_" + book.getBookName(), ".pdf");
 		f.deleteOnExit();
 		FileOutputStream fos = null;
@@ -56,5 +55,4 @@ public class ExportBookHandler implements UserActionHandler {
 		}
 		return f;
 	}
-
 }

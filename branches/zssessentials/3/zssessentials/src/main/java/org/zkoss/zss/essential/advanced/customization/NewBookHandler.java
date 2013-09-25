@@ -18,24 +18,22 @@ import org.zkoss.zss.ui.UserActionHandler;
  */
 public class NewBookHandler implements UserActionHandler {
 
-	
 	@Override
 	public boolean isEnabled(Book book, Sheet sheet) {
 		return true;
 	}
 
 	@Override
-	public boolean process(UserActionContext ctx) {
+	public boolean process(UserActionContext context) {
 		Importer importer = Importers.getImporter();
 		
 		try {
 			Book loadedBook = importer.imports(new File(WebApps.getCurrent()
 							.getRealPath("/WEB-INF/books/blank.xlsx")), "blank.xlsx");
-			ctx.getSpreadsheet().setBook(loadedBook);
+			context.getSpreadsheet().setBook(loadedBook);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return true;
 	}
-
 }
