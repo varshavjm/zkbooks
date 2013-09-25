@@ -80,6 +80,11 @@
 			<artifactId>cglib</artifactId>
 			<version>2.2.2</version>
 		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zss</groupId>
+			<artifactId>zsspdf</artifactId>
+			<version>${zss.version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
