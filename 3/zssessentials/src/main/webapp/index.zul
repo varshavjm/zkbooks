@@ -25,6 +25,7 @@
 		<a href="advanced/bean.zul">Reference to Java Beans</a>
 		<a href="advanced/springBean.zul">Reference to Spring Beans</a>
 		<a href="advanced/coedit.zul">Collaboration Edit</a>
+		<a href="advanced/customHandler.zul">Toolbar Customization</a>
 	</vlayout>
 	</window>
 </zk>
