@@ -17,6 +17,7 @@
 		<a href="hide.zul">Hide Rows and Columns</a>
 		<a href="picture.zul">Picture</a>
 		<a href="chart.zul">Chart</a>
+		<a href="protection.zul">Protection</a>
 		<a href="export.zul">Export to Excel</a>
 		
 		<label style="font-size:16px">Advanced:</label>
