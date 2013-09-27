@@ -18,9 +18,13 @@ import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
+import org.zkoss.zss.api.Range;
 import org.zkoss.zss.api.Ranges;
+import org.zkoss.zss.api.model.CellStyle;
+import org.zkoss.zss.api.model.EditableCellStyle;
 import org.zkoss.zss.api.model.Sheet;
 import org.zkoss.zss.ui.Spreadsheet;
+import org.zkoss.zss.ui.event.CellSelectionEvent;
 import org.zkoss.zss.ui.event.SheetSelectEvent;
 import org.zkoss.zul.Label;
 
@@ -36,8 +40,10 @@ public class ProtectionComposer extends SelectorComposer<Component>{
 	private Spreadsheet ss;
 	@Wire
 	private Label status;
-
+	@Wire
+	private Label lockStatus;
 	
+
 	@Override
 	public void doAfterCompose(Component comp) throws Exception {
 		super.doAfterCompose(comp);
@@ -62,5 +68,25 @@ public class ProtectionComposer extends SelectorComposer<Component>{
 	
 	private void updateSheetProtectionStatus(Sheet sheet){
 		status.setValue(Boolean.toString(sheet.isProtected()));
+	}
+	
+	@Listen("onClick = #toggleLock")
+	public void toggleLock(){
+		Range selection = Ranges.range(ss.getSelectedSheet(), ss.getSelection());
+		CellStyle oldStyle = selection.getCellStyle();
+		EditableCellStyle newStyle = selection.getCellStyleHelper().createCellStyle(oldStyle);
+		newStyle.setLocked(!oldStyle.isLocked());
+		selection.setCellStyle(newStyle);
+		updateCellLockedStatus(newStyle.isLocked());
+	}
+	
+	@Listen("onCellSelection = #ss")
+	public void selectCells(CellSelectionEvent event) {
+		CellStyle style = Ranges.range(ss.getSelectedSheet(), ss.getSelection()).getCellStyle();
+		updateCellLockedStatus(style.isLocked());
+	}
+	
+	private void updateCellLockedStatus(Boolean status){
+		lockStatus.setValue(status.toString());
 	}
 }
