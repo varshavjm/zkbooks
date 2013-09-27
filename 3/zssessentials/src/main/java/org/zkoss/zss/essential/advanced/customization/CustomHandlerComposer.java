@@ -32,9 +32,6 @@ public class CustomHandlerComposer extends SelectorComposer<Component> {
 		actionManager.registerHandler(
 				DefaultUserActionManagerCtrl.Category.AUXACTION.getName(),
 				AuxAction.SAVE_BOOK.getAction(), new SaveBookHandler());
-		actionManager.registerHandler(
-				DefaultUserActionManagerCtrl.Category.AUXACTION.getName(),
-				AuxAction.EXPORT_PDF.getAction(), new ExportBookHandler());
 	}
 }
 
