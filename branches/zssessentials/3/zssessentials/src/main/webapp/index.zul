@@ -18,6 +18,7 @@
 		<a href="picture.zul">Picture</a>
 		<a href="chart.zul">Chart</a>
 		<a href="protection.zul">Protection</a>
+		<a href="autoFilter.zul">Filter Data</a>
 		<a href="export.zul">Export to Excel</a>
 		
 		<label style="font-size:16px">Advanced:</label>
