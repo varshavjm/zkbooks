@@ -5,13 +5,13 @@
         User defined functions.
     </description>
     <import>
-        <import-name>MyCustomFormulas</import-name>
-        <import-class>org.zkoss.zss.essential.advanced.MyCustomFormulas</import-class>
+        <import-name>MyCustomFunctions</import-name>
+        <import-class>org.zkoss.zss.essential.advanced.MyCustomFunctions</import-class>
     </import>
  
     <function>
         <name>MYEXCHANGE</name>
-        <function-class>org.zkoss.zss.essential.advanced.MyCustomFormulas
+        <function-class>org.zkoss.zss.essential.advanced.MyCustomFunctions
         </function-class>
         <function-signature>double exchange(double,double);</function-signature>
         <description>
