@@ -10,14 +10,14 @@ import org.zkoss.poi.ss.formula.eval.ValueEval;
 import org.zkoss.poi.ss.formula.functions.Function;
 
 /**
- * Example of custom formulas. From basic to advanced one.
+ * Example of custom functions. From basic to advanced one.
  * @author Hawk
  *
  */
-public class MyCustomFormulas {
+public class MyCustomFunctions {
 
 	/**
-	 * Basic - Simple Formula.
+	 * Basic - Simple Function.
 	 * Exchange one money to another one according to specified exchange rate.
 	 * @param money
 	 * @param exchangeRate
@@ -28,7 +28,7 @@ public class MyCustomFormulas {
 	}	
 
 	/* 
-	 * Intermediate - Multiple Numeric Arguments Formula
+	 * Intermediate - Multiple Numeric Arguments Function
 	 * MultiOperandNumericFunction's constructor has 2 parameters.
 	 * the first parameter determines whether to evaluate boolean value. If it's
 	 * true, evaluator will evaluate boolean value to double. TRUE to 1 and FALSE to 0.
@@ -39,23 +39,23 @@ public class MyCustomFormulas {
 	private static Function MY_SUBTOTAL = new MySubtotal();
 	
 	/**
-	 * This method delegates calling to MySubtotal which implements the formula.
+	 * This method delegates calling to MySubtotal which implements the function.
 	 * @param args evaluation of all arguments
-	 * @param srcCellRow row index of the cell containing the formula under evaluation
-	 * @param srcCellCol column index of the cell containing the formula under evaluation
-	 * @return formula result
+	 * @param srcCellRow row index of the cell containing the function under evaluation
+	 * @param srcCellCol column index of the cell containing the function under evaluation
+	 * @return function result
 	 */
 	public static ValueEval mySubtotal(ValueEval[] args, int srcCellRow, int srcCellCol){
 		return MY_SUBTOTAL.evaluate(args, srcCellRow, srcCellCol); 
 	}
 
 	/**
-	 * Advanced - Manually-Handled Arguments Formula. 
+	 * Advanced - Manually-Handled Arguments Function. 
 	 * This method demonstrates how to evaluate arguments manually. 
-	 * The method implements a formula that concatenates all texts in cells 
+	 * The method implements a function that concatenates all texts in cells 
 	 * and ignores other types of value.
 	 * 
-	 * @param args the evaluated formula arguments
+	 * @param args the evaluated function arguments
 	 * @param srcCellRow unused
 	 * @param srcCellCol unused
 	 * @return calculated result, a subclass of ValueEval
