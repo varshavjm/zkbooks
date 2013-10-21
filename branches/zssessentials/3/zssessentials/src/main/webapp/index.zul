@@ -23,7 +23,7 @@
 		<a href="validation.zul">Validation</a>
 		
 		<label style="font-size:16px">Advanced:</label>
-		<a href="advanced/customFunction.zul">Custom Formulas</a>
+		<a href="advanced/customFunction.zul">Custom Functions</a>
 		<a href="advanced/bookSeries.zul">Reference to another Workbook</a>
 		<a href="advanced/bean.zul">Reference to Java Beans</a>
 		<a href="advanced/springBean.zul">Reference to Spring Beans</a>
