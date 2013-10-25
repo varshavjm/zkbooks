@@ -37,6 +37,7 @@ public class MyCustomFunctions {
 	 * Blank value will be evaluated to 0.
 	 */
 	private static Function MY_SUBTOTAL = new MySubtotal();
+	private static Function MY_LEN = new MyLen();
 	
 	/**
 	 * This method delegates calling to MySubtotal which implements the function.
@@ -47,6 +48,10 @@ public class MyCustomFunctions {
 	 */
 	public static ValueEval mySubtotal(ValueEval[] args, int srcCellRow, int srcCellCol){
 		return MY_SUBTOTAL.evaluate(args, srcCellRow, srcCellCol); 
+	}
+	
+	public static ValueEval myLen(ValueEval[] args, int srcCellRow, int srcCellCol){
+		return MY_LEN.evaluate(args, srcCellRow, srcCellCol); 
 	}
 
 	/**
