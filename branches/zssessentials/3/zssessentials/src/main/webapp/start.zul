@@ -4,7 +4,7 @@
 	apply="org.zkoss.zss.essential.MyComposer"
 		border="normal" height="100%" width="100%">
 		<spreadsheet id="ss" height="100%" width="100%"
-		maxVisibleRows="150" maxVisibleColumns="40"
+		maxVisibleRows="150" maxVisibleColumns="40" showContextMenu="true"
 		 showToolbar="true" showSheetbar="true" showFormulabar="true"/>
 	</window>
 </zk>
