@@ -27,7 +27,7 @@ public class CopyCutComposer extends SelectorComposer<Component> {
 	public void copyByUtil() {
 		Range src = Ranges.range(ss.getSelectedSheet(), ss.getSelection());
 		Range dest = Ranges.range(getDestinationSheet(), ss.getSelection());
-		CellOperationUtil.pasteFormula(src, dest);
+		CellOperationUtil.paste(src, dest);
 	}
 
 

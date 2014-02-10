@@ -20,7 +20,6 @@
 		<a href="protection.zul">Protection</a>
 		<a href="autoFilter.zul">Filter Data</a>
 		<a href="export.zul">Export to Excel</a>
-		<a href="validation.zul">Validation</a>
 		
 		<label style="font-size:16px">Advanced:</label>
 		<a href="advanced/customFunction.zul">Custom Functions</a>

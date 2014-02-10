@@ -10,9 +10,9 @@ public class MyBeanService {
 	}
 	
 	public Object get(String name){
-		if ("assetsBean".equals(name) && Executions.getCurrent().getSession().getAttribute(name)==null){
+		if ("myBean".equals(name) && Executions.getCurrent().getSession().getAttribute(name)==null){
 			//create beans if no exist
-			Executions.getCurrent().getSession().setAttribute("assetsBean",new AssetsBean());
+			Executions.getCurrent().getSession().setAttribute("myBean",new AssetsBean());
 		}
 		return Executions.getCurrent().getSession().getAttribute(name);
 	}
