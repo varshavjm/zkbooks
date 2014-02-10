@@ -8,11 +8,14 @@
 		<zk.version>6.5.4</zk.version>
 		<commons-io>1.3.1</commons-io>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
-		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
+		<packname>-${project.version}-${maven.build.timestamp}</packname>
 	</properties>
 	<packaging>war</packaging>
 	<name>The zssessentials Project</name>
-	<description>The zssessential Project</description>
+	<description>The project contains example codes of &quot;Spreadsheet Essentials&quot; (http://books.zkoss.org/wiki/ZK%20Spreadsheet%20Essentials/).
+
+How to release the project, run maven:
+    package</description>
 	<licenses>
 		<license>
 			<name>GNU LESSER GENERAL PUBLIC LICENSE, Version 3</name>
@@ -141,7 +144,7 @@
 				<version>2.2</version>
 				<executions>
 					<execution>
-						<id>webapp</id>
+						<id>project</id>
 						<phase>package</phase>
 						<goals>
 							<goal>single</goal>
@@ -150,7 +153,7 @@
 							<finalName>zssessential${packname}</finalName>
 							<appendAssemblyId>false</appendAssemblyId>
 							<descriptors>
-								<descriptor>src/main/assembly/webapp.xml</descriptor>
+								<descriptor>src/main/assembly/project.xml</descriptor>
 							</descriptors>
 						</configuration>
 					</execution>
