@@ -16,23 +16,23 @@
 					<rows>
 						<row>
 							Liquid Assets:
-							<doublebox id="liquidBox" value="${assetsBean.liquidAssets}"/>
+							<doublebox id="liquidBox" value="${myBean.liquidAssets}"/>
 						</row>
 						<row>
 							Fund and Investment:
-							<doublebox id="fundBox"  value="${assetsBean.fundInvestment}"/>
+							<doublebox id="fundBox"  value="${myBean.fundInvestment}"/>
 						</row>
 						<row>
 							Fixed Assets:
-							<doublebox id="fixedBox" value="${assetsBean.fixedAssets}"/>
+							<doublebox id="fixedBox" value="${myBean.fixedAssets}"/>
 						</row>
 						<row>
 							Intangible Asset:
-							<doublebox id="intangibleBox" value="${assetsBean.intangibleAsset}"/>
+							<doublebox id="intangibleBox" value="${myBean.intangibleAsset}"/>
 						</row>
 						<row>
 							Other Assets:
-							<doublebox id="otherBox" value="${assetsBean.otherAssets}"/>
+							<doublebox id="otherBox" value="${myBean.otherAssets}"/>
 						</row>
 					</rows>
 				</grid>

@@ -41,14 +41,14 @@ public class RefBeanComposer extends SelectorComposer<Component> {
 	public void update() {
 		updateAssetsBean();
 		//notify spreadsheet about the bean's change
-		Ranges.range(ss.getSelectedSheet()).notifyChange(new String[] {"assetsBean"} );
+		Ranges.range(ss.getSelectedSheet()).notifyChange(new String[] {"myBean"} );
 	}
 
 	/**
 	 * load user input to the bean.
 	 */
 	private void updateAssetsBean() {
-		AssetsBean assetsBean = (AssetsBean)MyBeanService.getMyBeanService().get("assetsBean");
+		AssetsBean assetsBean = (AssetsBean)MyBeanService.getMyBeanService().get("myBean");
 		assetsBean.setLiquidAssets(liquidBox.getValue());
 		assetsBean.setFundInvestment(fundBox.getValue());
 		assetsBean.setFixedAssets(fixedBox.getValue());

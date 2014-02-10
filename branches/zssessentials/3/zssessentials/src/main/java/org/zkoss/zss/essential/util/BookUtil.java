@@ -34,10 +34,10 @@ public class BookUtil {
 		}
 		InputStream is = null;
 		switch (type) {
-		case EXCEL_2003:
+		case XLS:
 			is = WebApps.getCurrent().getResourceAsStream("/WEB-INF/books/blank.xls");
 			break;
-		case EXCEL_2007:
+		case XLSX:
 			is = WebApps.getCurrent().getResourceAsStream("/WEB-INF/books/blank.xlsx");
 			break;
 		default :
@@ -72,7 +72,7 @@ public class BookUtil {
 		String bn = book.getBookName();
 		BookType type = book.getType();
 		
-		String ext = type==BookType.EXCEL_2003?".xls":".xlsx";
+		String ext = type==BookType.XLS?".xls":".xlsx";
 		int i = bn.lastIndexOf('.');
 		if(i==0){
 			bn = "book";
@@ -85,7 +85,7 @@ public class BookUtil {
 	static public File saveBookToTemp(Book book) throws IOException{
 		Exporter exporter = Exporters.getExporter("excel");
 		String bn = book.getBookName();
-		String ext = book.getType()==BookType.EXCEL_2003?".xls":".xlsx";
+		String ext = book.getType()==BookType.XLS?".xls":".xlsx";
 		int i = bn.lastIndexOf('.');
 		if(i==0){
 			bn = "book";
