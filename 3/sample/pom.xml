@@ -40,7 +40,7 @@
             <version>${zss.version}</version>
         </dependency>
         <!-- ZK -->
-        <!-- Uncomment to specify alternative ZK version , e.g. 6.5.5              
+        <!-- Uncomment to use alternative ZK dependencies, e.g. 6.5.5              
         <dependency>
             <groupId>org.zkoss.common</groupId>
             <artifactId>zcommon</artifactId>
