@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.zkoss.zss</groupId>
     <artifactId>sample</artifactId>
-    <description>A project to demonstrate sample pom.xml</description>
+    <description>A project to demonstrate sample pom.xml.</description>
     <properties>
         <zss.version>3.0.1</zss.version>
         <!--
@@ -12,7 +12,7 @@
     </properties>
     <version>3.0.1</version>
     <packaging>war</packaging>
-    <name>ZSS Sample</name>
+    <name>zss maven sample</name>
     <repositories>
 		<repository>
 			<id>ZK EVAL</id>
