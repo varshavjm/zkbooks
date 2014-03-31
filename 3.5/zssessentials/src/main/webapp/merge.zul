@@ -19,7 +19,7 @@
 								Selection: <label id="cellRef" />
 							</row>
 							<row spans="2" align="right">
-								<button id="mergeCenterButton" label="Toogle Merge and Center" width="120px" />
+								<button id="mergeCenterButton" label="Merge and Center" width="120px" />
 							</row>
 							<row spans="2" align="right">
 								<button id="mergeAcrossButton" label="Merge Across" width="120px"/>

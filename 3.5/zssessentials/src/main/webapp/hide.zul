@@ -6,12 +6,12 @@
 				showFormulabar="true" showContextMenu="true" showToolbar="true"
 				showSheetbar="true" maxVisibleRows="100" maxVisibleColumns="40"
 				src="/WEB-INF/books/blank.xlsx" />
-			<vlayout width="200px" vflex="1">
+			<vlayout width="250px" vflex="1">
 				<groupbox hflex="1" >
 					<caption label="Hide" />
-					<grid vflex="1" hflex="1">
+					<grid >
 						<columns>
-							<column width="100px"/>
+							<column/>
 						</columns>
 						<rows>
 							<row spans="2">
