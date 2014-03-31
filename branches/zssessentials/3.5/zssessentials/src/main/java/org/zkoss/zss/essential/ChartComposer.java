@@ -42,11 +42,9 @@ public class ChartComposer extends SelectorComposer<Component> {
 
 	
 	public void add() {
-		Range selection = Ranges.range(ss.getSelectedSheet(),ss.getSelection());
-		SheetAnchor selectionAnchor = SheetOperationUtil.toChartAnchor(selection);
-		ChartData chartData = ChartDataUtil.getChartData(ss.getSelectedSheet(),
-				new AreaRef("A1:B6"), Type.PIE);
-		selection.addChart(selectionAnchor, chartData, Type.PIE, Grouping.STANDARD, LegendPosition.RIGHT);
+		Range dataRange = Ranges.range(ss.getSelectedSheet(),new AreaRef("A1:B6"));
+		SheetAnchor selectionAnchor = SheetOperationUtil.toChartAnchor(dataRange);
+		dataRange.addChart(selectionAnchor, Type.PIE, Grouping.STANDARD, LegendPosition.RIGHT);
 		refreshChartList();
 	}
 
@@ -86,10 +84,8 @@ public class ChartComposer extends SelectorComposer<Component> {
 	
 	@Listen("onClick = #addButton")
 	public void addByUtil(){
-		ChartData chartData = ChartDataUtil.getChartData(ss.getSelectedSheet(),
-				new AreaRef("A1:B6"), Type.PIE);
-		SheetOperationUtil.addChart(Ranges.range(ss.getSelectedSheet(),ss.getSelection()),
-		chartData, Type.PIE, Grouping.STANDARD, LegendPosition.RIGHT);
+		SheetOperationUtil.addChart(Ranges.range(ss.getSelectedSheet(),new AreaRef("A1:B6")),
+		Type.PIE, Grouping.STANDARD, LegendPosition.RIGHT);
 		refreshChartList();
 	}
 	
